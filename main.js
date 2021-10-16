@@ -69,7 +69,7 @@ function changeHP(player) {
         $arenas.appendChild(playerWin(getWinner()));  
         $playerLife.style.width = 0;
         player.hp = 0;
-        $randomButton.disabled = true;
+        
     }
 
 }
@@ -87,8 +87,10 @@ function playerWin(name) {
 }
 
 function getWinner(){
+    $randomButton.disabled = true;
     if (player1.hp !== 0) return player1.name;
     if (player2.hp !== 0) return player2.name;  
+    
 }
 
 
