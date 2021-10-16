@@ -66,10 +66,10 @@ function changeHP(player) {
     $playerLife.style.width = player.hp + '%';
 
     if (player.hp <= 0) {
-        $arenas.appendChild(playerWin(getWinner()));  
+        $arenas.appendChild(playerWin(getWinner()));
         $playerLife.style.width = 0;
         player.hp = 0;
-        
+
     }
 
 }
@@ -81,16 +81,16 @@ function randomNumber(min, max) {
 }
 
 function playerWin(name) {
-        const $loseTitle = createElement('div', 'loseTitle');
-        $loseTitle.innerText = name + ' Wins!';
-        return $loseTitle;
+    const $loseTitle = createElement('div', 'loseTitle');
+    $loseTitle.innerText = name + ' Wins!';
+    return $loseTitle;
 }
 
-function getWinner(){
+function getWinner() {
     $randomButton.disabled = true;
     if (player1.hp !== 0) return player1.name;
-    if (player2.hp !== 0) return player2.name;  
-    
+    if (player2.hp !== 0) return player2.name;
+
 }
 
 
